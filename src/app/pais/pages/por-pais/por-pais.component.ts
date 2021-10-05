@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Country } from '../../interfaces/pais.interface';
+import { Country } from '../../interfaces/paises.interface';
 import { PaisService } from '../../services/pais.service';
 
 @Component({
@@ -23,7 +23,7 @@ export class PorPaisComponent {
 
     this.paisService.buscarPais(this.termino).subscribe(paises => {
       this.paises=paises;
-      console.log(this.paises);
+      console.log('Estos son los' + this.paises);
     }, (err) => {
       this.hayError=true;
       this.paises = [];
