@@ -6,26 +6,26 @@
 <ng-template #divPais>
     <div class="row">
         <div class="col-12">
-            <h1>Pais: <small>{{pais.name}}</small></h1>
+            <h1>Pais: <small>{{pais[0].name.common}}</small></h1>
         </div>
     </div> 
 
     <div class="row">
         <div class="col-4">
             <h3>Bandera</h3>
-            <img [src]="pais.flag" class="img-thumbnail">
+            <img [src]="pais[0].flags[0]" class="img-thumbnail">
         </div>
         <div class="col">
             <h3>Información</h3>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <strong>Población</strong> {{pais.population | number}}
+                    <strong>Área</strong> {{pais[0].area | number}}
                 </li>
                 <li class="list-group-item">
-                    <strong>Código numérico</strong> {{pais.numericCode}}
+                    <strong>Código numérico</strong> {{pais[0].ccn3}}
                 </li>
                 <li class="list-group-item">
-                    <strong>Código alpha3</strong> {{pais.alpha3Code}}
+                    <strong>Código alpha3</strong> {{pais[0].cca3}}
                 </li>
             </ul>
         </div>
@@ -34,22 +34,32 @@
     <h3>Traducciones</h3>
     <div class="row">
         <div class="col">
-            <span class="badge bg-primary mr-1">{{pais.translations.de}}</span>
-            <span class="badge bg-primary mr-1">{{pais.translations.es}}</span>
-            <span class="badge bg-primary mr-1">{{pais.translations.fr}}</span>
-            <span class="badge bg-primary mr-1">{{pais.translations.ja}}</span>
-            <span class="badge bg-primary mr-1">{{pais.translations.it}}</span>
-            <span class="badge bg-primary mr-1">{{pais.translations.br}}</span>
-            <span class="badge bg-primary mr-1">{{pais.translations.pt}}</span>
-            <span class="badge bg-primary mr-1">{{pais.translations.nl}}</span>
-            <span class="badge bg-primary mr-1">{{pais.translations.hr}}</span>
-            <span class="badge bg-primary mr-1">{{pais.translations.fa}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.ces.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.deu.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.est.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.fin.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.fra.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.hrv.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.hun.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.ita.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.jpn.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.kor.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.nld.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.per.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.pol.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.por.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.rus.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.slk.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.spa.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.swe.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.urd.common}}</span>
+            <span class="badge bg-primary mr-1">{{pais[0].translations.zho.common}}</span>
         </div>
     </div>
 
-    <pre class="mt-5">
+<!--     <pre class="mt-5">
         {{pais | json }}
-    </pre>
+    </pre> -->
 
 </ng-template>
 

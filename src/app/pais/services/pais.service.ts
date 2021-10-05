@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs'
 
-import { Country } from '../interfaces/pais.interface';
+import { Country } from '../interfaces/paises.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PaisService {
 
-  private apiUrl:string = 'https://restcountries.eu/rest/v2';
+  private apiUrl:string = 'https://restcountries.com/v3';
 
   constructor( private http: HttpClient) { }
 
@@ -23,9 +23,9 @@ export class PaisService {
     return this.http.get<Country[]>( url );
   }
 
-  getPaisPorAlpha( id:string ):Observable<Country>{
+  getPaisPorAlpha( id:string ):Observable<Country[]>{
     const url = `${this.apiUrl}/alpha/${id}`;
-    return this.http.get<Country>( url );
+    return this.http.get<Country[]>( url );
   }
 
   buscarRegion( termino:string ):Observable<Country[]>{
